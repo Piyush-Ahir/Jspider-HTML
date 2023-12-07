@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo selector</title>
+    <style>
+        h1::after{
+            content: "World";
+        }
+        h1::before{
+            content: "<\\>";
+        }
+        p::first-letter{
+            color: blue;
+        }
+        p::first-line{
+            color: red;
+        }
+        li::marker{
+            content:"<>";
+        }
+        /* Pseudo class selector */
+        /* Dynamic */
+        a:link{
+            color: green;
+        }
+        a:visited{
+            color: yellow;
+        }
+        a:hover{
+            color: white;
+        }
+        a:active{
+            color:plum
+        }
+        /* structural */
+        li:first-child{
+            color: blue;
+        }
+
+        li:first-of-type{
+            color: red;
+        }
+
+        u,li:last-of-type{
+            color: red;
+        }
+
+        u:last-child{
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1> Hello </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi architecto quis et culpa dicta voluptatem!</p>
+        <ul>
+            <li>1</li>
+        
+            <li>2</li>
+            <p>para1</p>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <div>
+        <a href="www.me.com">Click on me</a>
+        <u>underline 1</u>
+        <u>underline 2</u>
+        <u>underline 3</u>
+    </div>
+</body>
+</html>
