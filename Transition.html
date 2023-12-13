@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        body{
+            background-color: lightcyan;
+            color: wheat;
+        }
+        .main{
+            transition-duration: 2s;
+            transition-delay: 0.5s;
+        }
+        .main:hover {
+            /* background-color: lightskyblue; */
+            color: black;
+            width: 400px;
+        }
+        .container {
+            height: 100px;
+            width: 100px;
+            background-color: darkblue;
+            margin-top: 2px;
+            transition-duration: 2s;
+            transition-delay: 0.5s;
+            /* transition-property: width; */
+        }
+
+        .container:hover{
+            background-color: lightskyblue;
+            color: black;
+            width: 400px;
+        }
+
+        #box1 {
+            transition-timing-function: linear;
+        }
+
+        #box2 {
+            transition-timing-function: ease;
+        }
+
+        #box3 {
+            transition-timing-function: ease-in-out;
+        }
+
+        #box4 {
+            transition-timing-function: ease-in;
+        }
+
+        #box5 {
+            transition-timing-function: ease-out;
+        }
+
+        #box6 {
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="container" id="box1">Linear</div>
+        <div class="container" id="box2">Ease</div>
+        <div class="container" id="box3">Ease-in</div>
+        <div class="container" id="box4">Ease-out</div>
+        <div class="container" id="box5">Ease-in-out</div>
+        <div class="container" id="box6">Cubic-beizer</div>
+
+    </div>
+</body>
+
+</html>
